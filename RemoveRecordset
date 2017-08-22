@@ -4,7 +4,7 @@
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
- <xsl:template match="Record">
+ <xsl:template match="Recordset">
     <xsl:apply-templates/>
   </xsl:template> 
 </xsl:stylesheet>
