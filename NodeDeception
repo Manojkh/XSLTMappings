@@ -1,0 +1,18 @@
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="node()">
+  <xsl:copy>
+   <xsl:copy-of select="@*"/>
+   <xsl:apply-templates/>
+  </xsl:copy>
+</xsl:template>
+<xsl:template match="BODY_NODE">
+  <xsl:apply-templates/>
+</xsl:template>
+</xsl:stylesheet>
+
+In order to remove more than one node from the hierarchy, just replicate the following part for each node, which needs to be removed:
+<xsl:template match="ANOTHER_NODE">
+
+  <xsl:apply-templates/>
+
+</xsl:template>
